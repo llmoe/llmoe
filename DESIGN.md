@@ -1,43 +1,64 @@
-# LLmoe 主页设计
+# LLmoe · LoveLive! μ's 应援手账
 
-风格：软萌二次元 × 樱花粉；草莓牛奶粉、奶油白、莓果玫瑰色文字。
+主方向：粉色演出票 × Q 版成员贴纸 × 个人手账。奶油白纸张、浅粉格线、虚线撕口、手绘星星和应援棒。
+
+用户偏好：喜欢 LoveLive! 的 μ's；图片更可爱、整体重新设计、保留粉色、不展示项目。
 
 个人介绍：写代码，也创造一点有趣的东西。
 
-主页使用仓库内的 PNG、GIF 和 SVG。终端动画提供 reduced-motion 静态版本，手机使用单独的横幅排版。内容聚焦个人视觉与介绍，不展示项目或 Fork。
-
 ## 当前文件
 
-- `assets/sakura-city.png`：内置 image_gen 编辑生成的粉色插画。
-- `assets/hero-pink.png`、`hero-pink-mobile.png`：电脑和手机横幅。
-- `assets/terminal-pink.gif`：粉色打字动画；`terminal-pink.png` 为静态版本。
-- `assets/footer-pink.svg`：粉色爱心页脚。
-- `scripts/banner.html`：横幅和终端的可编辑排版源文件。
+- `assets/muse-chibi-v3.png`：内置 image_gen 生成的九位成员 Q 版同人合影，透明背景。
+- `assets/hero-lovelive-v3.png`、`hero-lovelive-v3-mobile.png`：电脑与手机的演出票横幅。
+- `assets/cheer-lovelive-v3.gif`、`cheer-lovelive-v3-mobile.gif`：应援棒轻摆、星星渐变、日常便签，手机版本使用更大字号；对应的 PNG 是减少动态效果时的静态版本。
+- `assets/footer-lovelive-v3.svg`：手绘票根页脚。
+- `scripts/lovelive-v3.html`：当前主题排版与动画源码。
+- `scripts/render-lovelive-v3.mjs`：渲染当前主题图片和 GIF。
 
-此前版本的图片保留在仓库历史与素材目录中，当前主页使用上述粉色版本。
+原生文字保留中文介绍，所有核心图片有替代文字。展示不依赖第三方动态图片服务。此前主题素材保留以便恢复。
+
+## 官方参考
+
+μ's 九位成员：高坂穗乃果、绚濑绘里、南琴梨、园田海未、星空凛、西木野真姬、东条希、小泉花阳、矢泽妮可。
+
+- [官方成员栏目](https://www.lovelive-anime.jp/special/members/?group=tu&work=m)
+- [官方列出的 μ's 九位成员](https://www.lovelive-anime.jp/yuigaoka/topics/detail.php?p=01_4947)
+
+页面为 LLmoe 个人同人应援主页。绘图使用 Q 版创作，没有嵌入歌曲音频或歌词。
 
 ## 重新生成
 
-需要 Node.js、Playwright、Chromium 和 ffmpeg。
+需要 Node.js、Playwright、Chromium 与 ffmpeg。当前图片渲染使用 Mac 的 Chalkboard SE、American Typewriter 字体。
 
 ```sh
 npm install --no-save playwright
 npx playwright install chromium
-node scripts/render-artwork.mjs
+node scripts/render-lovelive-v3.mjs
 ```
 
-已安装 Google Chrome 时可以用 `PLAYWRIGHT_CHANNEL=chrome`。生成帧位于被忽略的 `tmp/` 目录。
+有 Google Chrome 时可设 `PLAYWRIGHT_CHANNEL=chrome`。动画帧存于被忽略的 `tmp/`。
 
 ## 插画最终提示词
 
-生成方式：内置 `image_gen` 编辑；参考图为 `assets/cyber-city.png`，非 CLI 回退。
+生成方式：内置 `image_gen`，新图生成，透明背景，非 CLI 回退。
 
 ```text
-Use case: style-transfer
-Asset type: revised ultra-wide GitHub profile illustration, kawaii pink anime developer world.
-Input image 1: edit target. Restyle the supplied original developer and city scene into a much cuter, brighter, very pink kawaii anime illustration while preserving its ultra-wide 3:1 layout, the recognizable silver-white-haired developer at the right, the open laptop, and the small floating cat companion on the far right.
-Primary changes: replace the dark rainy night with a dreamy soft pink futuristic city at golden morning light, cherry-blossom petals, pearly clouds, subtle holographic hearts and little star sparkles. The adult developer has fluffy silver-white hair, a cute small dusty-pink ribbon clip, lively teal eyes, a tiny warm smile and soft rosy cheeks. Replace the heavy black technical jacket with a comfy ivory-and-blush-pink oversized hoodie, modest and fully clothed. Make the floating cat a round soft pink and cream holographic kitty with a playful friendly expression. Stylish anime linework, pastel gouache shading, gentle bloom, fluffy and cozy rather than gritty.
-Composition: character, laptop and cat remain on the right 45%. Left 52% must be light warm blush-cream negative space for later dark-rose title typography; almost empty, only very subtle tiny petal/star accents at the edges. No distracting objects on the left. Broad smooth atmosphere across the center with the pink city fading into pale cream.
-Palette: sakura pink #ffc3d7, strawberry milk #fff1f6, ivory #fffaf4, dusty rose #d65f91, tiny periwinkle accents. Predominantly pink, softly saturated; no black backdrop and no strong cyan.
-Constraints: NO TEXT, no lettering, no logos, no watermark, no interface cards or borders. Keep original fictional character identity, visibly adult, clean hands and natural anatomy. Wide hero image, illustration only.
+Use case: stylized-concept
+Asset type: transparent group sticker for a pink Love Live! μ's fan GitHub profile.
+Primary request: All NINE members of μ's from Love Live! as extremely cute super-deformed chibi girls, a warm hand-painted kawaii stationery group sticker. Exactly nine distinct girls, no duplicates and no extra people. Huge rounded heads, tiny bodies, tiny mitten hands, rosy cheeks, soft glossy anime eyes, cheerful friendly expressions, fluffy colored-pencil and gouache texture. Wholesome, modest full-body school-uniform styling: navy blazers, white shirts, plaid pleated skirts, socks and shoes, tasteful small colorful ribbon ties. Their recognized hair silhouettes and eye colors are essential.
+Arrange in two staggered rows, four at the back and five at the front, all faces fully visible:
+BACK ROW, left to right:
+1. Eli Ayase / 絢瀬絵里: blonde high ponytail, blue eyes.
+2. Nozomi Tojo / 東條希: long dark-purple hair in low twin tails, green eyes.
+3. Umi Sonoda / 園田海未: long straight dark navy-blue hair with blunt bangs, amber eyes.
+4. Kotori Minami / 南ことり: long ash-brown hair with side ponytail and characteristic little upward forelock, amber eyes.
+FRONT ROW, left to right:
+5. Rin Hoshizora / 星空凛: short orange bob, golden eyes, cheerful catlike smile.
+6. Hanayo Koizumi / 小泉花陽: short light-brown bob, green eyes, gentle shy smile.
+7. Honoka Kosaka / 高坂穂乃果: orange shoulder-length hair with small side ponytail, blue eyes, energetic smile, at center.
+8. Maki Nishikino / 西木野真姫: red shoulder-length hair, violet eyes.
+9. Nico Yazawa / 矢澤にこ: black twin tails with pink-red ribbons, red eyes, playful pose.
+Style: very round mochi-like chibi proportions and cute small limbs, two-head-tall bodies, delicate warm cocoa outlines, pale rosy shading and light pink ambient accents. Matte illustrative finish like lovingly drawn fan stationery. NOT realistically proportioned anime portraits, not glossy 3D, not mature glamorous figures. A few tiny pink hearts, cream star sparkles and music notes around the edges. White cut-sticker outline around the whole group.
+Composition: compact wide horizontal group, landscape 3:2 canvas, breathing room around all nine. All bodies visible, no cropped faces. Truly transparent background outside the sticker. No stage backdrop or rectangular panel.
+Constraints: no lettering, no text, logos, watermark, no extra characters or mascots. The final image must clearly contain exactly nine recognizable μ's members.
 ```

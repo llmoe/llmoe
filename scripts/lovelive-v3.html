@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8" />
+<title>LLmoe · μ's fan diary</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:transparent;color:#895a70}
+.ticket{width:1200px;height:630px;position:relative;overflow:hidden;border:2px solid #e8bdce;border-radius:28px;background-color:#fff8f4;background-image:linear-gradient(#eed7df45 1px,transparent 1px),linear-gradient(90deg,#eed7df45 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(circle at 0 50%,transparent 0 17px,#000 18px),radial-gradient(circle at 100% 50%,transparent 0 17px,#000 18px);mask-composite:intersect}
+.ticket::before{content:'';position:absolute;inset:18px;border:1px dashed #dcaabd;border-radius:18px;pointer-events:none}
+.tear{position:absolute;left:436px;top:32px;bottom:32px;border-left:2px dashed #e3b8c9}
+.tape{position:absolute;left:56px;top:11px;width:154px;height:27px;transform:rotate(-5deg);background:#f4cedbbf;border-left:2px dotted #e6b6c7;border-right:2px dotted #e6b6c7}
+.copy{position:absolute;left:56px;top:83px;z-index:2;width:356px}
+.eyebrow{font:16px 'Chalkboard SE',sans-serif;letter-spacing:1.5px;color:#ad718c}
+h1{font:700 105px/1.13 'Chalkboard SE','Arial Rounded MT Bold',sans-serif;letter-spacing:-4px;margin:5px 0 8px;transform:rotate(-2deg);color:#bc6289;text-shadow:2px 3px #fff}
+.subtitle{font:20px 'American Typewriter',serif;letter-spacing:.5px;margin:0 0 37px;color:#966b80}
+.tagline{font:23px/1.8 'PingFang SC',sans-serif;color:#865b6e;letter-spacing:1px}
+.club{display:inline-flex;gap:9px;align-items:center;margin-top:27px;border:1px solid #d6a0b7;border-radius:7px;background:#ffe8f0b8;padding:8px 15px;transform:rotate(-3deg);font:17px 'Chalkboard SE',sans-serif;color:#a9547a}
+.club b{font:700 22px Georgia,serif}
+.member-art{position:absolute;right:23px;top:129px;width:714px;height:476px;object-fit:contain;z-index:1;filter:drop-shadow(1px 4px 1px #bb7e9620)}
+.group-label{position:absolute;right:254px;top:60px;transform:rotate(3deg);font:700 54px Georgia,serif;color:#b2658c;z-index:2}
+.group-label small{font:12px 'American Typewriter',serif;display:block;text-align:center;letter-spacing:2px;margin-top:2px;color:#a06c81}
+.star{position:absolute;color:#e5b75c;font:30px Georgia,serif}.star.one{left:384px;top:72px;transform:rotate(18deg)}.star.two{right:42px;top:67px;font-size:38px}.star.three{right:85px;top:115px;font-size:19px;color:#d899bb}
+.barcode{position:absolute;left:58px;bottom:64px;width:278px;height:19px;color:#cba2b4}
+.serial{position:absolute;left:58px;bottom:36px;letter-spacing:1.5px;font:10px 'Menlo',monospace;color:#b28096}
+.small-heart{position:absolute;left:356px;bottom:48px;transform:rotate(10deg);font:39px 'Chalkboard SE',sans-serif;color:#cf88a9}
+.ticket.mobile{width:800px;height:1000px}
+.mobile .copy{top:53px;left:35px;width:730px;text-align:center}.mobile h1{font-size:119px;line-height:1.18;transform:rotate(-1deg);margin:6px 0}.mobile .subtitle{font-size:21px;margin-bottom:14px}.mobile .tagline{font-size:23px;line-height:1.5}.mobile .tagline br{display:none}.mobile .club{margin-top:14px;font-size:16px;transform:rotate(-2deg)}.mobile .eyebrow{font-size:18px}.mobile .tear{top:397px;left:31px;right:31px;bottom:auto;border-left:0;border-top:2px dashed #e3b8c9}.mobile .group-label{top:431px;right:338px;font-size:44px;transform:rotate(0)}.mobile .group-label small{display:none}.mobile .member-art{top:465px;right:21px;width:754px;height:503px}.mobile .serial{left:40px;bottom:16px;font-size:9px}.mobile .barcode,.mobile .small-heart{display:none}.mobile .star.one{left:87px;top:431px}.mobile .star.two{right:83px;top:433px}.mobile .star.three{right:139px;top:468px}.mobile .tape{left:320px;width:160px}
+.cheer{width:900px;height:142px;position:relative;overflow:hidden;border:1.5px solid #e6bbcd;border-radius:20px;background:#fff3f7;background-image:radial-gradient(#e7c0d055 .8px,transparent .8px);background-size:16px 16px}
+.cheer::before{content:'';position:absolute;inset:9px;border:1px dashed #edcbd8;border-radius:12px}
+.cheer-copy{position:absolute;left:36px;top:26px}.cheer-label{font:13px 'American Typewriter',serif;letter-spacing:2px;color:#b47a94;margin-bottom:16px}.message{font:25px 'PingFang SC',sans-serif;color:#926177;white-space:nowrap}
+.lights{position:absolute;right:28px;top:11px;width:155px;height:120px}.pink-stick{transform-origin:68px 102px}.blue-stick{transform-origin:105px 102px}.twinkle{transform-origin:50% 50%;transform-box:fill-box}
+.mobile .serial{display:none}
+.cheer.mobile{width:800px;height:190px}.cheer.mobile .cheer-copy{left:34px;top:40px}.cheer.mobile .cheer-label{font-size:17px;letter-spacing:1.5px;margin-bottom:22px}.cheer.mobile .message{font-size:32px}.cheer.mobile .lights{right:18px;top:43px;width:155px;height:120px}
+</style>
+<section class="ticket">
+  <div class="tape"></div><div class="tear"></div>
+  <div class="copy">
+    <div class="eyebrow">♡ WELCOME TO MY LITTLE STAGE</div>
+    <h1>LLmoe</h1>
+    <p class="subtitle">LoveLive! fan diary</p>
+    <div class="tagline">写代码，也创造<br />一点有趣的东西。</div>
+    <div class="club"><b>μ's</b> 应援手账 · 9 little stars</div>
+  </div>
+  <div class="group-label">μ's<small>LOVE LIVE! ♡</small></div>
+  <img class="member-art" src="../assets/muse-chibi-v3.png" alt="μ's 九位成员的 Q 版合影" />
+  <div class="star one">✧</div><div class="star two">✦</div><div class="star three">✧</div>
+  <svg class="barcode" viewBox="0 0 278 19" fill="currentColor" aria-hidden="true"><path d="M0 0h2v19H0zm7 0h4v19H7zm9 0h1v19h-1zm5 0h3v19h-3zm8 0h2v19h-2zm7 0h5v19h-5zm10 0h1v19h-1zm5 0h3v19h-3zm8 0h1v19h-1zm6 0h5v19h-5zm10 0h2v19h-2zm7 0h4v19h-4zm10 0h2v19h-2zm8 0h1v19h-1zm6 0h5v19h-5zm10 0h2v19h-2zm7 0h3v19h-3zm9 0h1v19h-1zm6 0h4v19h-4zm9 0h2v19h-2zm7 0h5v19h-5zm11 0h1v19h-1zm7 0h4v19h-4zm9 0h3v19h-3zm9 0h1v19h-1zm6 0h5v19h-5zm11 0h2v19h-2zm7 0h4v19h-4zm9 0h1v19h-1zm6 0h3v19h-3zm8 0h2v19h-2zm8 0h5v19h-5zm11 0h1v19h-1zm7 0h4v19h-4z"/></svg>
+  <div class="serial">ADMIT ONE / LLMOE / LOVE & LITTLE IDEAS</div>
+  <div class="small-heart">♡</div>
+</section>
+<section class="cheer">
+  <div class="cheer-copy"><div class="cheer-label">A LITTLE CHEER FOR EVERYDAY ♡</div><div class="message">今天也要做一点喜欢的东西。♡</div></div>
+  <svg class="lights" viewBox="0 0 155 120" aria-hidden="true">
+    <g class="pink-stick"><rect x="45" y="15" width="19" height="69" rx="8" fill="#ffb5d1" stroke="#d97fa7" stroke-width="2"/><path d="M51 22v48" stroke="#fff2f7" stroke-width="4" stroke-linecap="round"/><rect x="47" y="82" width="15" height="26" rx="5" fill="#ffedf5" stroke="#d49bb4" stroke-width="2"/><path d="m47 97-3 9" stroke="#d49bb4" stroke-width="2" stroke-linecap="round"/></g>
+    <g class="blue-stick"><rect x="103" y="22" width="19" height="62" rx="8" fill="#c5e7f3" stroke="#95bfd2" stroke-width="2"/><path d="M109 29v42" stroke="#f0fcff" stroke-width="4" stroke-linecap="round"/><rect x="105" y="82" width="15" height="26" rx="5" fill="#f3fafb" stroke="#a2becd" stroke-width="2"/></g>
+    <path class="twinkle" d="m81 7 3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#eabe6b"/>
+    <path class="twinkle" d="m134 38 2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#dfa1be"/>
+    <path d="M15 59c-12-12-23 1-10 12l10 8 10-8c13-11 2-24-10-12" transform="translate(11 -8) scale(.8)" fill="#e7a2bc"/>
+  </svg>
+</section>
+<script>
+window.setFrame=function(frame){
+  const messages=['今天也要做一点喜欢的东西。♡','给喜欢的事，留一点发光的时间。','代码、灵感，还有 μ\'s 的日常。♪'];
+  document.querySelector('.message').textContent=messages[Math.floor(frame/45)%messages.length];
+  const wave=Math.sin(frame*Math.PI*2/45);
+  document.querySelector('.pink-stick').style.transform='rotate('+(-14+wave*9)+'deg)';
+  document.querySelector('.blue-stick').style.transform='rotate('+(13-wave*9)+'deg)';
+  document.querySelectorAll('.twinkle').forEach((star,index)=>{star.style.opacity=.68+(Math.sin(frame*Math.PI*2/60+index)+1)*.16});
+};
+window.setFrame(0);
+</script>
+</html>
