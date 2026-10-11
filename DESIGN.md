@@ -4,14 +4,14 @@
 
 个人介绍：写代码，也创造一点有趣的东西。
 
-主页直接使用仓库中的静态 PNG、GIF 和 SVG，不依赖第三方动态图片服务。终端动画提供 reduced-motion 静态版本。展示内容来自当前可正常访问的公开仓库，Fork 明确标注。
+主页直接使用仓库中的静态 PNG、GIF 和 SVG，不依赖第三方动态图片服务。终端动画提供 reduced-motion 静态版本。内容聚焦个人视觉与介绍，不展示项目或 Fork。
 
 ## 文件
 
 - `assets/cyber-city.png`：内置 image_gen 生成的原创插画。
 - `assets/hero.png`：插画与代码排版组合的最终横幅。
 - `assets/terminal.gif`：打字动画；`terminal.png` 为静态版本。
-- `assets/project.svg`、`footer.svg`：可编辑的原生矢量设计。
+- `assets/footer.svg`：可编辑的原生矢量页脚。
 - `scripts/banner.html`：横幅和终端的排版源文件。
 
 ## 重新生成
