@@ -4,19 +4,22 @@
 <title>LLmoe · original profile artwork</title>
 <style>
 * { box-sizing: border-box; }
-body { margin: 0; background: #080d1c; color: #effcff; }
-.hero { width: 1200px; height: 400px; position: relative; overflow: hidden; background: url('../assets/cyber-city.png') center / cover; }
-.hero::after { content: ''; position: absolute; inset: 0; border: 1px solid #65f3ec35; pointer-events: none; }
-.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#060b18aa,transparent 65%); }
+body { margin: 0; background: #fff1f6; color: #b64074; }
+.hero { width: 1200px; height: 400px; position: relative; overflow: hidden; border-radius: 22px; background: url('../assets/sakura-city.png') center / cover; }
+.hero::after { content: ''; position: absolute; inset: 0; border: 1px solid #dc8cad40; border-radius: inherit; pointer-events: none; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#fff8fbaa,transparent 65%); }
 .copy { position: absolute; left: 48px; top: 44px; }
-.eyebrow { font: 14px 'Menlo',monospace; letter-spacing: 3px; color: #65f3ec; display: flex; align-items: center; gap: 12px; }
-.signal { width: 7px; height: 7px; background: #65f3ec; box-shadow: 0 0 12px #65f3ec; }
-h1 { margin: 12px 0 -6px; font: 800 132px/.98 'Avenir Next Condensed','Arial Narrow',sans-serif; letter-spacing: -4px; text-shadow: 3px 2px #65f3ec20; }
-.byline { margin: 19px 0 27px; font: 17px 'Menlo',monospace; letter-spacing: 4px; color: #b5cbdc; }
-.tag { display: inline-block; border-left: 2px solid #ff819a; padding-left: 13px; font: 16px 'PingFang SC',sans-serif; letter-spacing: 2px; color: #ebf5ff; }
-.serial { position: absolute; left: 48px; bottom: 27px; font: 10px 'Menlo',monospace; letter-spacing: 2px; color: #92a6bd; }
-.serial b { color: #ff819a; font-weight: 400; }
-.corner { position: absolute; right: 19px; bottom: 19px; width: 20px; height: 20px; border-right: 2px solid #65f3ec; border-bottom: 2px solid #65f3ec; }
+.eyebrow { font: 14px 'Menlo',monospace; letter-spacing: 2px; color: #ad4774; display: flex; align-items: center; gap: 12px; }
+.signal { width: 8px; height: 8px; background: #de76a2; transform: rotate(-45deg); position: relative; }
+.signal::before,.signal::after { content: ''; width: 8px; height: 8px; background: #de76a2; border-radius: 50%; position: absolute; }
+.signal::before { top: -4px; left: 0; }
+.signal::after { left: 4px; top: 0; }
+h1 { margin: 22px 0 -6px; font: 128px/.98 'Arial Rounded MT Bold','Avenir Next',sans-serif; letter-spacing: -5px; text-shadow: 3px 3px #fffafad9; }
+.byline { margin: 25px 0 23px; font: 16px 'Menlo',monospace; letter-spacing: 3px; color: #8c5672; }
+.tag { display: inline-block; border: 1px solid #e3b1c4; border-radius: 20px; padding: 7px 14px; background: #fffafac9; font: 16px 'PingFang SC',sans-serif; letter-spacing: 1px; color: #86516a; }
+.serial { position: absolute; left: 48px; bottom: 27px; font: 10px 'Menlo',monospace; letter-spacing: 2px; color: #986a80; }
+.serial b { color: #cd568b; font-weight: 400; }
+.corner { position: absolute; right: 19px; bottom: 19px; width: 20px; height: 20px; border-right: 2px solid #db8cac; border-bottom: 2px solid #db8cac; border-radius: 0 0 10px 0; }
 .hero.mobile { width: 800px; height: 420px; }
 .hero.mobile .copy { left: 30px; top: 58px; }
 .hero.mobile h1 { font-size: 104px; margin-top: 22px; }
@@ -24,17 +27,17 @@ h1 { margin: 12px 0 -6px; font: 800 132px/.98 'Avenir Next Condensed','Arial Nar
 .hero.mobile .byline { font-size: 13px; letter-spacing: 2px; }
 .hero.mobile .tag { font-size: 12px; letter-spacing: 0; }
 .hero.mobile .serial { left: 30px; font-size: 8px; }
-.terminal { width: 800px; height: 98px; background: #0b1422; display: flex; align-items: center; border: 1px solid #25344a; position: relative; overflow: hidden; font: 21px 'Menlo',monospace; }
-.terminal::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: #65f3ec; }
-.prompt { margin-left: 36px; color: #65f3ec; }
-.command { color: #e1edfa; margin-left: 16px; }
-.cursor { margin-left: 4px; display: inline-block; height: 25px; width: 11px; background: #ff819a; }
+.terminal { width: 800px; height: 98px; background: #fff1f7; display: flex; align-items: center; border: 1px solid #e8b7cc; border-radius: 16px; position: relative; overflow: hidden; font: 21px 'Menlo',monospace; }
+.terminal::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: #df8aaf; }
+.prompt { margin-left: 36px; color: #b64074; }
+.command { color: #79516b; margin-left: 16px; }
+.cursor { margin-left: 4px; display: inline-block; height: 25px; width: 11px; background: #df6ca0; border-radius: 3px; }
 .dots { display: flex; gap: 7px; position: absolute; right: 28px; top: 20px; }
-.dots i { width: 5px; height: 5px; border-radius: 50%; background: #4a6077; }
-.dots i:first-child { background: #ff819a; }
-.dots i:last-child { background: #65f3ec; }
-.lower { position: absolute; left: 36px; bottom: 14px; color: #69839c; font: 10px 'Menlo',monospace; letter-spacing: 2px; }
-.pixel-cat { position: absolute; right: 28px; top: 39px; width: 44px; height: 34px; color: #65f3ec; }
+.dots i { width: 5px; height: 5px; border-radius: 50%; background: #e9bad0; }
+.dots i:first-child { background: #df6ca0; }
+.dots i:last-child { background: #b8a2d1; }
+.lower { position: absolute; left: 36px; bottom: 14px; color: #a77891; font: 10px 'Menlo',monospace; letter-spacing: 2px; }
+.pixel-cat { position: absolute; right: 28px; top: 39px; width: 44px; height: 34px; color: #b64074; }
 </style>
 <section class="hero">
   <div class="copy">
@@ -43,18 +46,18 @@ h1 { margin: 12px 0 -6px; font: 800 132px/.98 'Avenir Next Condensed','Arial Nar
     <p class="byline">CODE. CREATE. PLAY.</p>
     <div class="tag">写代码，也创造一点有趣的东西。</div>
   </div>
-  <div class="serial"><b>✦</b> A LITTLE CODE. A LITTLE CURIOSITY.</div>
+  <div class="serial"><b>♡</b> A LITTLE CODE. A LITTLE MAGIC.</div>
   <div class="corner"></div>
 </section>
 <section class="terminal">
   <span class="prompt">llmoe ~ $</span><span class="command">Code. Create. Play.</span><span class="cursor"></span>
   <div class="dots"><i></i><i></i><i></i></div>
-  <div class="lower">PERSONAL WORKSPACE / KEEP EXPLORING</div>
-  <svg class="pixel-cat" viewBox="0 0 44 34" fill="currentColor" aria-hidden="true"><path d="M4 0h8v6h20V0h8v28H4z" fill="#65f3ec18"/><path d="M4 0h4v28H4zM8 0h4v6h-4zM36 0h4v28h-4zM32 0h4v6h-4zM12 6h20v4H12zM8 28h28v4H8zM12 15h4v4h-4zM28 15h4v4h-4zM20 22h4v4h-4z"/></svg>
+  <div class="lower">A COZY LITTLE CORNER OF THE INTERNET</div>
+  <svg class="pixel-cat" viewBox="0 0 44 34" aria-hidden="true"><path d="M7 13 5 3l11 7a23 23 0 0 1 12 0l11-7-2 10c7 14-1 19-15 19S0 27 7 13Z" fill="#ffe0ed" stroke="#c2648d" stroke-width="1.5" stroke-linejoin="round"/><path d="m11 21 3-2 3 2m10 0 3-2 3 2m-14 5 3 2 3-2" fill="none" stroke="#b64074" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="10" cy="25" rx="3" ry="1.5" fill="#ee9dbb"/><ellipse cx="34" cy="25" rx="3" ry="1.5" fill="#ee9dbb"/></svg>
 </section>
 <script>
 window.setFrame = function(frame) {
-  const phrases = ['Code. Create. Play.', 'Make something useful.', 'Stay curious, keep building.'];
+  const phrases = ['Code. Create. Play.', 'Make cute little things.', 'Stay curious, stay cozy.'];
   const cycle = 45;
   const phase = frame % cycle;
   const phrase = phrases[Math.floor(frame / cycle) % phrases.length];
