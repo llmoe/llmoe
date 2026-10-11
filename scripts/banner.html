@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8" />
+<title>LLmoe · original profile artwork</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #080d1c; color: #effcff; }
+.hero { width: 1200px; height: 400px; position: relative; overflow: hidden; background: url('../assets/cyber-city.png') center / cover; }
+.hero::after { content: ''; position: absolute; inset: 0; border: 1px solid #65f3ec35; pointer-events: none; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#060b18aa,transparent 65%); }
+.copy { position: absolute; left: 48px; top: 44px; }
+.eyebrow { font: 14px 'Menlo',monospace; letter-spacing: 3px; color: #65f3ec; display: flex; align-items: center; gap: 12px; }
+.signal { width: 7px; height: 7px; background: #65f3ec; box-shadow: 0 0 12px #65f3ec; }
+h1 { margin: 12px 0 -6px; font: 800 132px/.98 'Avenir Next Condensed','Arial Narrow',sans-serif; letter-spacing: -4px; text-shadow: 3px 2px #65f3ec20; }
+.byline { margin: 19px 0 27px; font: 17px 'Menlo',monospace; letter-spacing: 4px; color: #b5cbdc; }
+.tag { display: inline-block; border-left: 2px solid #ff819a; padding-left: 13px; font: 16px 'PingFang SC',sans-serif; letter-spacing: 2px; color: #ebf5ff; }
+.serial { position: absolute; left: 48px; bottom: 27px; font: 10px 'Menlo',monospace; letter-spacing: 2px; color: #92a6bd; }
+.serial b { color: #ff819a; font-weight: 400; }
+.corner { position: absolute; right: 19px; bottom: 19px; width: 20px; height: 20px; border-right: 2px solid #65f3ec; border-bottom: 2px solid #65f3ec; }
+.hero.mobile { width: 800px; height: 420px; }
+.hero.mobile .copy { left: 30px; top: 58px; }
+.hero.mobile h1 { font-size: 104px; margin-top: 22px; }
+.hero.mobile .eyebrow { font-size: 10px; letter-spacing: 2px; }
+.hero.mobile .byline { font-size: 13px; letter-spacing: 2px; }
+.hero.mobile .tag { font-size: 12px; letter-spacing: 0; }
+.hero.mobile .serial { left: 30px; font-size: 8px; }
+.terminal { width: 800px; height: 98px; background: #0b1422; display: flex; align-items: center; border: 1px solid #25344a; position: relative; overflow: hidden; font: 21px 'Menlo',monospace; }
+.terminal::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: #65f3ec; }
+.prompt { margin-left: 36px; color: #65f3ec; }
+.command { color: #e1edfa; margin-left: 16px; }
+.cursor { margin-left: 4px; display: inline-block; height: 25px; width: 11px; background: #ff819a; }
+.dots { display: flex; gap: 7px; position: absolute; right: 28px; top: 20px; }
+.dots i { width: 5px; height: 5px; border-radius: 50%; background: #4a6077; }
+.dots i:first-child { background: #ff819a; }
+.dots i:last-child { background: #65f3ec; }
+.lower { position: absolute; left: 36px; bottom: 14px; color: #69839c; font: 10px 'Menlo',monospace; letter-spacing: 2px; }
+.pixel-cat { position: absolute; right: 28px; top: 39px; width: 44px; height: 34px; color: #65f3ec; }
+</style>
+<section class="hero">
+  <div class="copy">
+    <div class="eyebrow"><i class="signal"></i> HELLO, WORLD / こんにちは</div>
+    <h1>LLmoe</h1>
+    <p class="byline">CODE. CREATE. PLAY.</p>
+    <div class="tag">写代码，也创造一点有趣的东西。</div>
+  </div>
+  <div class="serial"><b>✦</b> A LITTLE CODE. A LITTLE CURIOSITY.</div>
+  <div class="corner"></div>
+</section>
+<section class="terminal">
+  <span class="prompt">llmoe ~ $</span><span class="command">Code. Create. Play.</span><span class="cursor"></span>
+  <div class="dots"><i></i><i></i><i></i></div>
+  <div class="lower">PERSONAL WORKSPACE / KEEP EXPLORING</div>
+  <svg class="pixel-cat" viewBox="0 0 44 34" fill="currentColor" aria-hidden="true"><path d="M4 0h8v6h20V0h8v28H4z" fill="#65f3ec18"/><path d="M4 0h4v28H4zM8 0h4v6h-4zM36 0h4v28h-4zM32 0h4v6h-4zM12 6h20v4H12zM8 28h28v4H8zM12 15h4v4h-4zM28 15h4v4h-4zM20 22h4v4h-4z"/></svg>
+</section>
+<script>
+window.setFrame = function(frame) {
+  const phrases = ['Code. Create. Play.', 'Make something useful.', 'Stay curious, keep building.'];
+  const cycle = 45;
+  const phase = frame % cycle;
+  const phrase = phrases[Math.floor(frame / cycle) % phrases.length];
+  const length = phase < 24 ? Math.ceil(phrase.length * phase / 24) : phase < 38 ? phrase.length : Math.floor(phrase.length * (45 - phase) / 7);
+  document.querySelector('.command').textContent = phrase.slice(0, length);
+  document.querySelector('.cursor').style.opacity = phase < 24 || phase >= 38 || phase % 8 < 4 ? 1 : 0;
+  document.querySelector('.pixel-cat').style.transform = 'translateY(' + (Math.floor(frame / 8) % 2 ? -2 : 0) + 'px)';
+};
+</script>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="226" viewBox="0 0 1200 226" role="img" aria-labelledby="title desc">
+<title id="title">YY Ecommerce Assets</title><desc id="desc">Reusable CSS and icons for ecommerce pages, distributed with jsDelivr.</desc>
+<rect x="1" y="1" width="1198" height="224" rx="12" fill="#0b1422" stroke="#25344a"/>
+<path d="M1 31V13a12 12 0 0 1 12-12h84" fill="none" stroke="#65f3ec" stroke-width="2"/>
+<g font-family="Menlo,Consolas,monospace"><text x="38" y="38" fill="#65f3ec" font-size="13" letter-spacing="2">01 / PUBLIC PROJECT</text></g>
+<text x="36" y="94" fill="#effaff" font-family="Avenir Next,Arial,sans-serif" font-weight="700" font-size="39">YY Ecommerce Assets</text>
+<text x="38" y="139" fill="#a5bdcf" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="24">可复用的电商页面样式与图标</text>
+<g font-family="Menlo,Consolas,monospace" font-size="13" letter-spacing="1.5"><text x="38" y="189" fill="#ff819a">CSS</text><text x="88" y="189" fill="#496078">/</text><text x="111" y="189" fill="#8db5cc">ICONS</text><text x="181" y="189" fill="#496078">/</text><text x="204" y="189" fill="#8db5cc">JSDELIVR CDN</text></g>
+<g transform="translate(995 52)" fill="none" stroke="#65f3ec" stroke-width="2.5"><path d="m0 27 55-27 55 27-55 28zM0 27v60l55 28 55-28V27M55 55v60M27 13l55 28v21"/><path d="m22 76 15 8" stroke="#ff819a"/></g>
+<path d="M1149 178h24m-9-9 9 9-9 9" fill="none" stroke="#65f3ec" stroke-width="2"/>
+</svg>
